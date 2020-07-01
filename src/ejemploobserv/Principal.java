@@ -130,6 +130,6 @@ public class Principal extends javax.swing.JFrame implements Observer{
     @Override
     public void update(Observable o, Object arg) {
         System.out.println("Recibio Notificación: "+arg);
-        txtArea.append(arg.toString());
+        txtArea.append(arg.toString()+"\n");
     }
 }

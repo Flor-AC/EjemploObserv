@@ -46,7 +46,7 @@ public class HiloCliente extends Observable implements Runnable{
     
     @Override
     public void run() {
-        while(isStoped){
+        while(!isStoped){
             try {
                 setChanged();
                 

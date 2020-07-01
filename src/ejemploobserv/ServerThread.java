@@ -34,7 +34,7 @@ public class ServerThread extends Thread{
     @Override
     public void run() {
         Socket cliente = null;
-        while(isStoped){
+        while(!isStoped){
             try {
                 cliente = server.accept();
                 HiloCliente hc = new HiloCliente(cliente);
@@ -45,7 +45,7 @@ public class ServerThread extends Thread{
                 stoped();
                 Logger.getLogger(ServerThread.class.getName()).log(Level.SEVERE, null, ex);
             }
-        }
+        }  
         
         super.run(); //To change body of generated methods, choose Tools | Templates.
     }
